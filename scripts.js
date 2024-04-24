@@ -1,6 +1,7 @@
 const nav = document.querySelector(".nav");
 const navOpen = document.querySelector("#open");
 const navClose = document.querySelector("#close");
+const year = document.querySelector("#year");
 
 const toggleNav = (open) => {
   nav.setAttribute("aria-hidden", !open);
@@ -30,3 +31,5 @@ navOpen.addEventListener("click", openNav);
 navClose.addEventListener("click", closeNav);
 window.addEventListener("resize", initMobile);
 initMobile();
+
+year.textContent = new Date().getFullYear();

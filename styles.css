@@ -109,6 +109,12 @@ body {
   width: 1em;
   fill: currentColor;
 }
+.site-footer {
+  background-color: var(--color-site-1-1);
+  color: var(--color-site-1-c);
+  text-align: center;
+  padding: 1rem;
+}
 .site-header__heading,
 .site-header__subheading,
 .section__heading,
