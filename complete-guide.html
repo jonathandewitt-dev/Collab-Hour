@@ -218,9 +218,7 @@
                   that tasks should not be estimated in points nor time, so it's
                   best to avoid this practice. Instead, use this time to
                   determine whether a story is as small as it can possibly get
-                  while also delivering a complete feature, or “vertical slice”
-                  if you prefer. Be sure all requirements are provided and no
-                  uncertainties remain.
+                  while also delivering a complete feature, or “vertical slice.”
                   <a
                     class="link"
                     href="https://ronjeffries.com/xprog/blog/how-should-user-stories-be-written/"
@@ -269,7 +267,31 @@
                     the bug.
                   </li>
                 </ol>
+                <p class="article-section__text">
+                  To triage bugs effectively, determine the severity in terms of
+                  "low," "medium," or "high." If a bug is deemed "low," it may
+                  be deferred to a later date. A "medium" bug should be resolved
+                  reasonably quickly, but it is not necessary to pause
+                  everything else. If a bug has a "high" severity, all other
+                  work should be paused until it is resolved.
+                </p>
+                <p class="article-section__text">
+                  It's important to note that the severity of a bug is not
+                  necessarily related to its complexity. A "high" severity bug
+                  may be a simple fix, while a "low" severity bug may be
+                  difficult to resolve. The severity is determined by the impact
+                  the bug has on the user experience.
+                </p>
+                <p class="article-section__text">
+                  If a bug is found with a story that is currently in progress
+                  and unreleased to production, avoid creating a separate bug
+                  report. Instead, add the bug to the story as a subtask, as
+                  additional tracking will only create confusion. Bugs found in
+                  active stories do not need to be assigned a severity, as no
+                  users will be impacted until the story is released.
+                </p>
               </section>
+
               <section class="article-section">
                 <h1 class="article-section__heading">Technical Debt</h1>
                 <p class="article-section__text">
