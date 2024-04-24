@@ -114,6 +114,7 @@ body {
   color: var(--color-site-1-c);
   text-align: center;
   padding: 1rem;
+  margin-top: 2rem;
 }
 .site-header__heading,
 .site-header__subheading,
