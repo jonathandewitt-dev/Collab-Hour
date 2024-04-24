@@ -23,374 +23,386 @@
     <meta name="twitter:image" content="/images/computer-code.jpg" />
   </head>
   <body>
-    <div class="nav-wrapper">
-      <nav class="nav" id="nav">
-        <div class="toggle-wrapper">
+    <div class="page">
+      <div class="page-content">
+        <div class="nav-wrapper">
+          <nav class="nav" id="nav">
+            <div class="toggle-wrapper">
+              <button
+                class="nav-toggle"
+                aria-expanded="false"
+                aria-controls="nav"
+                id="close"
+              >
+                <svg
+                  class="icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <a class="nav-link" href="/"><strong>Collab Hour</strong></a>
+            <a class="nav-link nav-link--current" href="/complete-guide">
+              The Complete Guide
+            </a>
+            <a class="nav-link" href="/collab-teams">Collab Teams</a>
+            <a class="nav-link" href="/core-values">Core Values</a>
+          </nav>
           <button
             class="nav-toggle"
             aria-expanded="false"
             aria-controls="nav"
-            id="close"
+            id="open"
           >
             <svg
-              class="icon"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 384 512"
+              viewBox="0 0 448 512"
+              class="icon"
             >
               <path
-                d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
               />
             </svg>
           </button>
         </div>
-        <a class="nav-link" href="/"><strong>Collab Hour</strong></a>
-        <a class="nav-link nav-link--current" href="/complete-guide">
-          The Complete Guide
-        </a>
-        <a class="nav-link" href="/collab-teams">Collab Teams</a>
-        <a class="nav-link" href="/core-values">Core Values</a>
-      </nav>
-      <button
-        class="nav-toggle"
-        aria-expanded="false"
-        aria-controls="nav"
-        id="open"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-          class="icon"
-        >
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-          />
-        </svg>
-      </button>
-    </div>
-    <header class="site-header">
-      <h1 class="site-header__heading">Collab Hour</h1>
-      <h2 class="site-header__subheading">The Complete Guide</h2>
-    </header>
-    <main class="main-content">
-      <section class="section">
-        <h1 class="section__heading">Summary</h1>
-        <p class="section__text">
-          The model is straightforward: there's one daily meeting called “Collab
-          Hour,” approximately one hour in duration, where all necessary
-          discussions take place. This process promotes a healthy skepticism
-          toward additional meetings, forbidding them unless there's a clear
-          justification.
-        </p>
-        <p class="section__text">
-          During each session, six descending priorities guide the discussion,
-          though it's not necessary for all six to be completed before
-          concluding the meeting:
-        </p>
-        <ol class="section__list">
-          <li class="section__list-item">
-            <strong>Refine:</strong> Refine new stories, triage bugs, and
-            prioritize tech debt.
-          </li>
-          <li class="section__list-item">
-            <strong>Assign:</strong> Ensure each team member has assigned work.
-          </li>
-          <li class="section__list-item">
-            <strong>Unblock:</strong> Identify blockers and resolve them during
-            this session. There's no sense noting action items if the team is
-            capable of assisting immediately.
-          </li>
-          <li class="section__list-item">
-            <strong>Review:</strong> Review all outstanding pull requests.
-          </li>
-          <li class="section__list-item">
-            <strong>Mob:</strong> Identify the top priority and use mob
-            programming to get it done. This involves the entire team including
-            Product and QA; immediate feedback is invaluable.
-          </li>
-          <li class="section__list-item">
-            <strong>Retrospect:</strong> If there's nothing urgent, review
-            retrospective items. Each day, the team should add items to a board
-            asynchronously, so that they can eventually be reviewed together in
-            this meeting.
-          </li>
-        </ol>
-        <figure class="figure">
-          <img
-            src="/images/calendar-meetings.jpg"
-            alt="Agile team"
-            class="figure__image"
-          />
-        </figure>
-        <p class="section__text">
-          Customers should regularly should join the “Collab Hour” session to
-          provide feedback and answer questions. This works fairly well at two
-          weeks, which is a similar cadence to most sprints in Scrum. It should
-          be noted, however, that this does not require a release at the same
-          interval. Wherever possible, favor continuous deployment with feature
-          flags to minimize long-lived feature branches.
-        </p>
-        <p class="section__text">
-          While no particular metrics are required by this framework, teams may
-          choose to track data for continuous improvement. While additional
-          process overhead is generally discouraged, there is only one absolute
-          prescription in this regard - any metrics generated by the team must
-          remain strictly confidential. If such data is consumed by external
-          parties, it will surely leave misleading impressions of the team's
-          effectiveness.
-        </p>
-        <blockquote class="quote">
-          “Working software is the primary measure of progress.”
-          <br />
-          &mdash; Agile Manifesto
-        </blockquote>
-      </section>
-      <section class="section">
-        <h1 class="section__heading">The Details</h1>
-        <article class="article">
-          <h1 class="article__heading">When meetings are acceptable</h1>
-          <p class="article__text">
-            Always favor “working sessions” over “meetings.” When determining
-            whether scheduled time is necessary, it's important to answer “yes”
-            to one of these two questions:
-          </p>
-          <ol class="article__list">
-            <li class="article__list-item">
-              Will this session accomplish a tangible outcome?
-            </li>
-            <li class="article__list-item">
-              Is the information required before productive work can begin?
-            </li>
-          </ol>
-          <p class="article__text">
-            Additionally, we should also answer “yes” to this one follow-up
-            question.
-          </p>
-          <ol class="article__list">
-            <li class="article__list-item">
-              Is this equally true for every single person in attendance?
-            </li>
-          </ol>
-          <p class="article__text">
-            With that in mind, collaborative sessions are encouraged, such as
-            pair or mob programming. With empathy, take into consideration your
-            coworkers' social tolerance levels before scheduling additional
-            time. For some, Collab Hour alone may be pushing the limit. The
-            important part is optimizing team synergy, for the most enjoyable
-            and productive collaboration experience.
-          </p>
-        </article>
-        <article class="article">
-          <h1 class="article__heading">Refine</h1>
-          <p class="article__text">
-            Refinement is the process of preparing tasks for development. The
-            goal is to have a clear understanding of the work required before
-            development begins.
-          </p>
-          <p class="article__text">
-            While it is important to prepare tasks for development, it is
-            equally important to avoid spending the entire hour refining tasks.
-            Focus on refining only the most important tasks for the day, and
-            make sure to leave time for other priorities.
-          </p>
-          <p class="article__text">
-            Some days, you may find that there are no tasks to refine. This is
-            perfectly normal, and in fact better for the sake of productivity.
-            Simply move on to the next priority.
-          </p>
-          <p class="article__text">
-            The following are some best practices for refining different types
-            of tasks.
-          </p>
-          <section class="article-section">
-            <h1 class="article-section__heading">Stories</h1>
-            <p class="article-section__text">
-              Most, if not all authors of the original Agile manifesto agree
-              that tasks should not be estimated in points nor time, so it's
-              best to avoid this practice. Instead, use this time to determine
-              whether a story is as small as it can possibly get while also
-              delivering a complete feature, or “vertical slice” if you prefer.
-              Be sure all requirements are provided and no uncertainties remain.
-              <a
-                class="link"
-                href="https://ronjeffries.com/xprog/blog/how-should-user-stories-be-written/"
-              >
-                Use Ron Jeffries' approach to crafting user stories for best
-                results.
-              </a>
+        <header class="site-header">
+          <h1 class="site-header__heading">Collab Hour</h1>
+          <h2 class="site-header__subheading">The Complete Guide</h2>
+        </header>
+        <main class="main-content">
+          <section class="section">
+            <h1 class="section__heading">Summary</h1>
+            <p class="section__text">
+              The model is straightforward: there's one daily meeting called
+              “Collab Hour,” approximately one hour in duration, where all
+              necessary discussions take place. This process promotes a healthy
+              skepticism toward additional meetings, forbidding them unless
+              there's a clear justification.
             </p>
-          </section>
-          <section class="article-section">
-            <h1 class="article-section__heading">Bug Reports</h1>
-            <p class="article-section__text">
-              Careful bug reporting is essential for smooth transitions from QA
-              to development. Poorly written bug reports can lead to unnecessary
-              confusion and delay their resolution. Below is a checklist of
-              items that should be included in every bug report.
+            <p class="section__text">
+              During each session, six descending priorities guide the
+              discussion, though it's not necessary for all six to be completed
+              before concluding the meeting:
             </p>
-            <ol class="article-section__list">
-              <li class="article-section__list-item">
-                <strong>Environments:</strong> This is not only the environment
-                the bug was reported in, but rather <em>all</em> environments
-                where the bug exists. (Common environments might include: DEV,
-                TEST, QA, and STAGING.) This helps a developer understand when
-                and how the bug was introduced.
+            <ol class="section__list">
+              <li class="section__list-item">
+                <strong>Refine:</strong> Refine new stories, triage bugs, and
+                prioritize tech debt.
               </li>
-              <li class="article-section__list-item">
-                <strong>Steps to reproduce:</strong> Provide a comprehensive
-                list of all user actions from the moment the app is opened until
-                the bug is observed.
+              <li class="section__list-item">
+                <strong>Assign:</strong> Ensure each team member has assigned
+                work.
               </li>
-              <li class="article-section__list-item">
-                <strong>Scenario:</strong> It's the responsibility of the bug
-                reporter to outline the details of the scenario and reproduce
-                the issue in the development environment. All the necessary
-                prerequisite data must be in place for the developer to begin
-                working. If reproduction is not possible, this should be noted
-                during triage before the task is picked up.
+              <li class="section__list-item">
+                <strong>Unblock:</strong> Identify blockers and resolve them
+                during this session. There's no sense noting action items if the
+                team is capable of assisting immediately.
               </li>
-              <li class="article-section__list-item">
-                <strong>Expected vs Actual:</strong> Clearly articulate the
-                expected behavior versus what is observed. This reduces
-                uncertainty and provides guidelines for acceptance to close the
-                bug.
+              <li class="section__list-item">
+                <strong>Review:</strong> Review all outstanding pull requests.
+              </li>
+              <li class="section__list-item">
+                <strong>Mob:</strong> Identify the top priority and use mob
+                programming to get it done. This involves the entire team
+                including Product and QA; immediate feedback is invaluable.
+              </li>
+              <li class="section__list-item">
+                <strong>Retrospect:</strong> If there's nothing urgent, review
+                retrospective items. Each day, the team should add items to a
+                board asynchronously, so that they can eventually be reviewed
+                together in this meeting.
               </li>
             </ol>
-          </section>
-          <section class="article-section">
-            <h1 class="article-section__heading">Technical Debt</h1>
-            <p class="article-section__text">
-              Technical debt tasks should be authored and tracked by engineers,
-              rather than product owners. Engineers possess the technical
-              expertise to make informed decisions around acceptable risk and
-              quality.
+            <figure class="figure">
+              <img
+                src="/images/calendar-meetings.jpg"
+                alt="Agile team"
+                class="figure__image"
+              />
+            </figure>
+            <p class="section__text">
+              Customers should regularly should join the “Collab Hour” session
+              to provide feedback and answer questions. This works fairly well
+              at two weeks, which is a similar cadence to most sprints in Scrum.
+              It should be noted, however, that this does not require a release
+              at the same interval. Wherever possible, favor continuous
+              deployment with feature flags to minimize long-lived feature
+              branches.
             </p>
-            <p class="article-section__text">
-              Putting aside refinement for a moment, it's vital to consider a
-              key aspect of this topic. Regular attention must be given to
-              completing technical debt each week, rather than focusing solely
-              on new features. It's best to allocate dedicated time each week
-              for both product and development sides to work independently. This
-              should provide engineers with the necessary time to address
-              technical debt.
+            <p class="section__text">
+              While no particular metrics are required by this framework, teams
+              may choose to track data for continuous improvement. While
+              additional process overhead is generally discouraged, there is
+              only one absolute prescription in this regard - any metrics
+              generated by the team must remain strictly confidential. If such
+              data is consumed by external parties, it will surely leave
+              misleading impressions of the team's effectiveness.
             </p>
+            <blockquote class="quote">
+              “Working software is the primary measure of progress.”
+              <br />
+              &mdash; Agile Manifesto
+            </blockquote>
           </section>
-        </article>
-        <article class="article">
-          <h1 class="article__heading">Assign</h1>
-          <p class="article__text">
-            All team members should have a clear understanding of their tasks
-            for the day. If anyone is left without work to do, Collab Hour
-            provides an opportunity to address that.
-          </p>
-          <p class="article__text">
-            It's important to note that some tasks, particularly complex
-            stories, may require the collaboration of multiple engineers. A
-            well-defined story (vertical slice) often encompasses various
-            components, such as frontend, backend, and database changes. In such
-            cases, it may be beneficial to assign the same story to multiple
-            individuals or create subtasks for convenience.
-          </p>
-        </article>
-        <article class="article">
-          <h1 class="article__heading">Unblock</h1>
-          <p class="article__text">
-            If any team member is blocked, whether by something outside their
-            control or simply by a difficult task that requires assistance, then
-            the team should work together during the Collab Hour session to
-            resolve the issue promptly.
-          </p>
-          <p class="article__text">
-            If the organization and team are structured properly, then no
-            blocker should lie beyond the team's power to rectify. Addressing
-            blockers in real-time eliminates the need for deferred action items
-            and facilitates a swift return to productivity.
-          </p>
-        </article>
-        <article class="article">
-          <h1 class="article__heading">Review</h1>
-          <p class="article__text">
-            While collaboration is encouraged for most tasks, there are
-            occasions where individual work is more suitable. If any such code
-            is sitting in review, Collab Hour presents an occasion to make any
-            corrections as a group, then merge once it has unanimous approval.
-            The goal is to adjust and merge code during the group review, rather
-            than leaving comments for the pull request owner to address later.
-          </p>
-        </article>
-        <article class="article">
-          <h1 class="article__heading">Mob</h1>
-          <p class="article__text">
-            <a
-              class="link"
-              href="https://www.agilealliance.org/resources/experience-reports/mob-programming-agile2014/"
-              >Mob programming</a
-            >
-            is a tactic for group collaboration on a single computer. With
-            remote work becoming more commonplace, this can be accomplished by
-            using tools such as VSCode's Live Share extension, or IntelliJ's
-            Code With Me. You can try different approaches and adapt it to what
-            works best for the team, but essentially, mob programming is the
-            idea of rotating these roles at set intervals:
-          </p>
-          <ol class="article__list">
-            <li class="article__list-item">
-              <strong>Driver:</strong> The typist, responsible for implementing
-              instructions provided by the navigator. This role offers valuable
-              learning opportunities.
-            </li>
-            <li class="article__list-item">
-              <strong>Navigator:</strong> Coordinates input from team members
-              and guides the driver. This role is ideal for leading the team.
-            </li>
-            <li class="article__list-item">
-              <strong>Advisors:</strong> Everyone else in the room is tasked
-              with open communication, answering questions, and making
-              suggestions. This role is best for offering a specific set of
-              knowledge or expertise.
-            </li>
-          </ol>
-          <p class="article__text">
-            Roles can be rotated at regular intervals, such as every ten
-            minutes, to ensure equal contribution from all team members. While
-            these roles provide structure, teams should feel free to adjust them
-            as needed. A mature team may even spontaneously switch roles based
-            on emerging ideas or needs.
-          </p>
-        </article>
-        <article class="article">
-          <h1 class="article__heading">Retrospect</h1>
-          <blockquote class="quote">
-            “At regular intervals, the team reflects on how to become more
-            effective, then tunes and adjusts its behavior accordingly.”
-            <br />
-            &mdash; Agile Manifesto
-          </blockquote>
-          <p class="article__text">
-            A key part of Agile is continuous improvement, often achieved
-            through retrospective sessions. Traditionally, teams use methods
-            like sticky notes or digital equivalents to categorize ideas into
-            columns such as "start, stop, continue." However, this approach
-            requires the interruption of ongoing tasks and dedicated time during
-            everyone's workday.
-          </p>
-          <p class="article__text">
-            An alternative approach is to continuously reflect throughout the
-            day. Team members may jot down ideas as they arise and discuss them
-            spontaneously. An accessible retro board should be maintained, where
-            ideas can be recorded at any time. When the team convenes during the
-            Collab Hour session, the team can work together to agree on process
-            changes to address each suggestion. The intent is to take each item
-            as far as possible before beginning a group conversation around it.
-          </p>
-        </article>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <small
-        >&copy; <span id="year"></span> collabhouragile.org. All rights
-        reserved.</small
-      >
-    </footer>
+          <section class="section">
+            <h1 class="section__heading">The Details</h1>
+            <article class="article">
+              <h1 class="article__heading">When meetings are acceptable</h1>
+              <p class="article__text">
+                Always favor “working sessions” over “meetings.” When
+                determining whether scheduled time is necessary, it's important
+                to answer “yes” to one of these two questions:
+              </p>
+              <ol class="article__list">
+                <li class="article__list-item">
+                  Will this session accomplish a tangible outcome?
+                </li>
+                <li class="article__list-item">
+                  Is the information required before productive work can begin?
+                </li>
+              </ol>
+              <p class="article__text">
+                Additionally, we should also answer “yes” to this one follow-up
+                question.
+              </p>
+              <ol class="article__list">
+                <li class="article__list-item">
+                  Is this equally true for every single person in attendance?
+                </li>
+              </ol>
+              <p class="article__text">
+                With that in mind, collaborative sessions are encouraged, such
+                as pair or mob programming. With empathy, take into
+                consideration your coworkers' social tolerance levels before
+                scheduling additional time. For some, Collab Hour alone may be
+                pushing the limit. The important part is optimizing team
+                synergy, for the most enjoyable and productive collaboration
+                experience.
+              </p>
+            </article>
+            <article class="article">
+              <h1 class="article__heading">Refine</h1>
+              <p class="article__text">
+                Refinement is the process of preparing tasks for development.
+                The goal is to have a clear understanding of the work required
+                before development begins.
+              </p>
+              <p class="article__text">
+                While it is important to prepare tasks for development, it is
+                equally important to avoid spending the entire hour refining
+                tasks. Focus on refining only the most important tasks for the
+                day, and make sure to leave time for other priorities.
+              </p>
+              <p class="article__text">
+                Some days, you may find that there are no tasks to refine. This
+                is perfectly normal, and in fact better for the sake of
+                productivity. Simply move on to the next priority.
+              </p>
+              <p class="article__text">
+                The following are some best practices for refining different
+                types of tasks.
+              </p>
+              <section class="article-section">
+                <h1 class="article-section__heading">Stories</h1>
+                <p class="article-section__text">
+                  Most, if not all authors of the original Agile manifesto agree
+                  that tasks should not be estimated in points nor time, so it's
+                  best to avoid this practice. Instead, use this time to
+                  determine whether a story is as small as it can possibly get
+                  while also delivering a complete feature, or “vertical slice”
+                  if you prefer. Be sure all requirements are provided and no
+                  uncertainties remain.
+                  <a
+                    class="link"
+                    href="https://ronjeffries.com/xprog/blog/how-should-user-stories-be-written/"
+                  >
+                    Use Ron Jeffries' approach to crafting user stories for best
+                    results.
+                  </a>
+                </p>
+              </section>
+              <section class="article-section">
+                <h1 class="article-section__heading">Bug Reports</h1>
+                <p class="article-section__text">
+                  Careful bug reporting is essential for smooth transitions from
+                  QA to development. Poorly written bug reports can lead to
+                  unnecessary confusion and delay their resolution. Below is a
+                  checklist of items that should be included in every bug
+                  report.
+                </p>
+                <ol class="article-section__list">
+                  <li class="article-section__list-item">
+                    <strong>Environments:</strong> This is not only the
+                    environment the bug was reported in, but rather
+                    <em>all</em> environments where the bug exists. (Common
+                    environments might include: DEV, TEST, QA, and STAGING.)
+                    This helps a developer understand when and how the bug was
+                    introduced.
+                  </li>
+                  <li class="article-section__list-item">
+                    <strong>Steps to reproduce:</strong> Provide a comprehensive
+                    list of all user actions from the moment the app is opened
+                    until the bug is observed.
+                  </li>
+                  <li class="article-section__list-item">
+                    <strong>Scenario:</strong> It's the responsibility of the
+                    bug reporter to outline the details of the scenario and
+                    reproduce the issue in the development environment. All the
+                    necessary prerequisite data must be in place for the
+                    developer to begin working. If reproduction is not possible,
+                    this should be noted during triage before the task is picked
+                    up.
+                  </li>
+                  <li class="article-section__list-item">
+                    <strong>Expected vs Actual:</strong> Clearly articulate the
+                    expected behavior versus what is observed. This reduces
+                    uncertainty and provides guidelines for acceptance to close
+                    the bug.
+                  </li>
+                </ol>
+              </section>
+              <section class="article-section">
+                <h1 class="article-section__heading">Technical Debt</h1>
+                <p class="article-section__text">
+                  Technical debt tasks should be authored and tracked by
+                  engineers, rather than product owners. Engineers possess the
+                  technical expertise to make informed decisions around
+                  acceptable risk and quality.
+                </p>
+                <p class="article-section__text">
+                  To allow the necessary time to address technical debt, it's
+                  best to allocate dedicated time each week for engineers to
+                  work independently of product demands.
+                </p>
+              </section>
+            </article>
+            <article class="article">
+              <h1 class="article__heading">Assign</h1>
+              <p class="article__text">
+                All team members should have a clear understanding of their
+                tasks for the day. If anyone is left without work to do, Collab
+                Hour provides an opportunity to address that.
+              </p>
+              <p class="article__text">
+                It's important to note that some tasks, particularly complex
+                stories, may require the collaboration of multiple engineers. A
+                well-defined story (vertical slice) often encompasses various
+                components, such as frontend, backend, and database changes. In
+                such cases, it may be beneficial to assign the same story to
+                multiple individuals or create subtasks for convenience.
+              </p>
+            </article>
+            <article class="article">
+              <h1 class="article__heading">Unblock</h1>
+              <p class="article__text">
+                If any team member is blocked, whether by something outside
+                their control or simply by a difficult task that requires
+                assistance, then the team should work together during the Collab
+                Hour session to resolve the issue promptly.
+              </p>
+              <p class="article__text">
+                If the organization and team are structured properly, then no
+                blocker should lie beyond the team's power to rectify
+                internally. Addressing blockers in real-time eliminates the need
+                for deferred action items and facilitates a swift return to
+                productivity.
+              </p>
+            </article>
+            <article class="article">
+              <h1 class="article__heading">Review</h1>
+              <p class="article__text">
+                While collaboration is encouraged for most tasks, there are
+                occasions where individual work is more suitable. If any such
+                code is sitting in review, Collab Hour presents an occasion to
+                make any corrections as a group, then merge once it has
+                unanimous approval. The goal is to adjust and merge code during
+                the group review, rather than leaving comments for the pull
+                request owner to address at a later time.
+              </p>
+            </article>
+            <article class="article">
+              <h1 class="article__heading">Mob</h1>
+              <p class="article__text">
+                <a
+                  class="link"
+                  href="https://www.agilealliance.org/resources/experience-reports/mob-programming-agile2014/"
+                  >Mob programming</a
+                >
+                is a tactic for group collaboration on a single computer. With
+                remote work becoming more commonplace, this can be accomplished
+                by using tools such as VSCode's Live Share extension, or
+                IntelliJ's Code With Me. You can try different approaches and
+                adapt it to what works best for the team, but essentially, mob
+                programming is the idea of rotating these roles at set
+                intervals:
+              </p>
+              <ol class="article__list">
+                <li class="article__list-item">
+                  <strong>Driver:</strong> The typist, responsible for
+                  implementing instructions provided by the navigator. This role
+                  offers valuable learning opportunities.
+                </li>
+                <li class="article__list-item">
+                  <strong>Navigator:</strong> Coordinates input from team
+                  members and guides the driver. This role is ideal for leading
+                  the team.
+                </li>
+                <li class="article__list-item">
+                  <strong>Advisors:</strong> Everyone else in the room is tasked
+                  with open communication, answering questions, and making
+                  suggestions. This role is best for offering a specific set of
+                  knowledge or expertise.
+                </li>
+              </ol>
+              <p class="article__text">
+                Roles can be rotated at regular intervals, such as every ten
+                minutes, to ensure equal contribution from all team members.
+                While these roles provide structure, teams should feel free to
+                adjust them as needed. A mature team may even spontaneously
+                switch roles based on emerging ideas or needs.
+              </p>
+            </article>
+            <article class="article">
+              <h1 class="article__heading">Retrospect</h1>
+              <blockquote class="quote">
+                “At regular intervals, the team reflects on how to become more
+                effective, then tunes and adjusts its behavior accordingly.”
+                <br />
+                &mdash; Agile Manifesto
+              </blockquote>
+              <p class="article__text">
+                A key part of Agile is continuous improvement, often achieved
+                through retrospective sessions. Traditionally, teams use methods
+                like sticky notes or digital equivalents to categorize ideas
+                into columns such as "start, stop, continue." However, this
+                approach requires the interruption of ongoing tasks to meet and
+                discuss.
+              </p>
+              <p class="article__text">
+                An alternative approach is to continuously reflect throughout
+                the day. The retro board should remain accessible at any time so
+                ideas can be recorded as they arise. During the Collab Hour
+                session, the team can work together to agree on process changes
+                to address each suggestion. The intent is to take each item as
+                far as possible before beginning a group conversation around it.
+                This approach is a more efficient use of time and primes the
+                discussion to be more fruitful.
+              </p>
+            </article>
+          </section>
+        </main>
+      </div>
+      <footer class="site-footer">
+        <small
+          >&copy; <span id="year"></span> collabhouragile.org. All rights
+          reserved.</small
+        >
+      </footer>
+    </div>
     <script src="/scripts.js"></script>
   </body>
 </html>
