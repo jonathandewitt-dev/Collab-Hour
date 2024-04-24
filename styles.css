@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700");
+:root {
+  --color-site-1: #100;
+  --color-site-1-1: #300;
+  --color-site-1-c: #eee;
+  --color-site-1-c-1: #fcc;
+  --color-site-2: rgba(190, 1, 1, 0.1);
+  --color-site-2-1: rgba(190, 1, 1, 0.8);
+  --font-text: "Roboto", sans-serif;
+  --font-heading: "Josefin Slab", serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--color-site-1);
+  background-image: radial-gradient(
+    circle,
+    var(--color-site-1-1),
+    var(--color-site-1)
+  );
+  color: var(--color-site-1-c);
+}
+[aria-hidden="true"] {
+  display: none !important;
+}
+.nav {
+  align-items: center;
+  display: flex;
+  min-height: 4rem;
+  justify-content: center;
+  background-color: var(--color-site-1-1);
+  font-weight: 100;
+  flex-wrap: wrap;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-site-1-c-1);
+  white-space: nowrap;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  opacity: 0.5;
+  transition: all 0.3s;
+  font-size: 1.4rem;
+}
+.nav-link:hover {
+  background-color: var(--color-site-2);
+  opacity: 1;
+}
+.nav-link--current {
+  color: var(--color-site-1-c);
+  text-shadow: 0 0 1rem var(--color-site-2-1);
+  opacity: 1;
+}
+.nav-toggle {
+  display: none;
+}
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width: 599px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    overflow: hidden;
+    border: 0 solid;
+    border-bottom-right-radius: 1rem;
+  }
+  .nav-link {
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .nav-toggle {
+    background-color: var(--color-site-1-1);
+    color: var(--color-site-1-c);
+    border: 0 solid;
+    border-bottom-right-radius: 1rem;
+    font-size: 3rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    cursor: pointer;
+  }
+  .toggle-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .nav-link {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+.icon {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+.site-header__heading,
+.site-header__subheading,
+.section__heading,
+.article__heading,
+.article-section__heading {
+  font-family: var(--font-heading);
+  font-weight: 100;
+  margin: 0;
+  line-height: 1em;
+}
+.site-header__heading,
+.site-header__subheading {
+  padding: 4rem 2rem;
+  text-align: center;
+  text-shadow: 0 0 2rem var(--color-site-2-1);
+}
+.section__heading,
+.article__heading {
+  padding: 0 0.5rem 1rem;
+}
+.site-header__heading {
+  padding-bottom: 0;
+  font-size: 6rem;
+}
+.site-header__subheading {
+  padding-top: 0;
+  font-size: 2rem;
+}
+.section__heading,
+.article__heading,
+.article-section__heading {
+  color: var(--color-site-1-c-1);
+}
+.section__heading {
+  font-size: 2rem;
+  padding-bottom: 0;
+}
+.section__heading::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.1rem;
+  background-color: var(--color-site-1-c-1);
+  margin: 1.5rem 0;
+}
+.article__heading {
+  font-size: 1.6rem;
+}
+.article-section__heading {
+  font-size: 1.2rem;
+  padding: 0 1rem 0.5rem;
+}
+.section__text,
+.article__text,
+.article-section__text {
+  padding: 1rem;
+  padding-top: 0;
+  margin: 0;
+}
+.section__text:last-child,
+.article__text:last-child,
+.article-section__text:last-child {
+  padding-bottom: 2rem;
+}
+.quote {
+  font-style: italic;
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 1.1em;
+  margin: 1rem 1rem 2rem;
+  border: 0.1rem solid var(--color-site-1-c-1);
+  border-radius: 1rem;
+  text-align: center;
+}
+.link {
+  color: var(--color-site-1-c-1);
+  text-decoration: none;
+  border-bottom: 0.1rem solid;
+}
+.section__list,
+.article__list,
+.article-section__list {
+  padding: 0rem 4rem 1rem;
+  margin: 0;
+}
+.section__list-item,
+.article__list-item,
+.article-section__list-item {
+  padding: 0 0 0.5rem;
+}
+.banner-image {
+  width: 80%;
+  height: 15rem;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 85% 100%, 0 100%);
+  margin-bottom: 2rem;
+}
+.figure {
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem 1rem;
+}
+.figure__image {
+  max-width: 100%;
+  max-height: 32rem;
+  object-fit: contain;
+  border: 0 solid;
+  border-radius: 1rem;
+  overflow: hidden;
+}
