@@ -123,7 +123,8 @@ body {
 .article-section__heading {
   font-family: var(--font-heading);
   font-weight: 100;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 50rem;
   line-height: 1em;
 }
 .site-header__heading,
@@ -173,7 +174,8 @@ body {
 .article-section__text {
   padding: 1rem;
   padding-top: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 50rem;
 }
 .section__text:last-child,
 .article__text:last-child,
@@ -186,9 +188,12 @@ body {
   font-size: 1.6rem;
   font-weight: 100;
   line-height: 1.1em;
-  margin: 1rem 1rem 2rem;
+  margin: 1rem auto 2rem;
+  width: calc(100vw - 4rem);
+  max-width: 50rem;
   border: 0.1rem solid var(--color-site-1-c-1);
   border-radius: 1rem;
+  box-sizing: border-box;
   text-align: center;
 }
 .link {
@@ -200,7 +205,9 @@ body {
 .article__list,
 .article-section__list {
   padding: 0rem 4rem 1rem;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 50rem;
+  box-sizing: border-box;
 }
 .section__list-item,
 .article__list-item,
