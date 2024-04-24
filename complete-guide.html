@@ -331,12 +331,13 @@
                 Hour provides an opportunity to address that.
               </p>
               <p class="article__text">
-                It's important to note that some tasks, particularly complex
-                stories, may require the collaboration of multiple engineers. A
-                well-defined story (vertical slice) often encompasses various
-                components, such as frontend, backend, and database changes. In
-                such cases, it may be beneficial to assign the same story to
-                multiple individuals or create subtasks for convenience.
+                Some tasks, particularly complex stories, may require the
+                collaboration of multiple engineers. A well-defined story
+                (vertical slice) often spans across the frontend, backend, and
+                database. In such cases, multiple individuals may be assigned to
+                the same story, or subtasks could be created to track each layer
+                independently. This often requires a high degree of
+                collaboration, thus pair or mob programming is encouraged.
               </p>
             </article>
             <article class="article">
@@ -354,14 +355,21 @@
                 for deferred action items and facilitates a swift return to
                 productivity.
               </p>
+              <p class="article__text">
+                If the team is unable to resolve a blocker during the Collab
+                Hour, then the team should agree on a plan to address it before
+                the next session. This may involve escalating the issue to a
+                different team or individual, but the goal is to ensure that the
+                team can continue working without impediment.
+              </p>
             </article>
             <article class="article">
               <h1 class="article__heading">Review</h1>
               <p class="article__text">
-                While collaboration is encouraged for most tasks, there are
-                occasions where individual work is more suitable. If any such
-                code is sitting in review, Collab Hour presents an occasion to
-                make any corrections as a group, then merge once it has
+                While active collaboration may limit the need for reviews, there
+                are occasions where individual work is more suitable. If any
+                such code is awaiting approval, Collab Hour presents an occasion
+                to make any corrections as a group, then merge once it has
                 unanimous approval. The goal is to adjust and merge code during
                 the group review, rather than leaving comments for the pull
                 request owner to address at a later time.
@@ -380,8 +388,8 @@
                 by using tools such as VSCode's Live Share extension, or
                 IntelliJ's Code With Me. You can try different approaches and
                 adapt it to what works best for the team, but essentially, mob
-                programming is the idea of rotating these roles at set
-                intervals:
+                programming is the idea of rotating the following roles at
+                regular intervals, such as every ten minutes.
               </p>
               <ol class="article__list">
                 <li class="article__list-item">
@@ -402,11 +410,23 @@
                 </li>
               </ol>
               <p class="article__text">
-                Roles can be rotated at regular intervals, such as every ten
-                minutes, to ensure equal contribution from all team members.
                 While these roles provide structure, teams should feel free to
                 adjust them as needed. A mature team may even spontaneously
                 switch roles based on emerging ideas or needs.
+              </p>
+              <p class="article__text">
+                During the Collab Hour session, the team should identify the
+                highest priority task and use mob programming to complete it
+                together. If the clock runs out before the task is done, finish
+                the current thought and then commit the code before ending the
+                session. Engineers may choose to continue working on the task
+                after the session ends, but after Collab Hour, the team is free
+                to drop off as needed.
+              </p>
+              <p class="article__text">
+                If there is no urgent task to address, then the team should move
+                on to the next priority. Remember not to neglect the retrospect
+                portion for too many days in a row.
               </p>
             </article>
             <article class="article">
