@@ -98,6 +98,12 @@
               <li class="secondary-nav__list-item">
                 <a class="secondary-nav__link" href="#retrospect">Retrospect</a>
               </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#feedback">Feedback</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#metrics">Metrics</a>
+              </li>
             </ul>
           </nav>
           <section class="section" id="summary">
@@ -107,8 +113,11 @@
               “Collab Hour,” approximately one hour in duration, where all
               necessary discussions take place. This process
               <em>forbids</em> additional meetings without a clear
-              justification. See the section on “<a class="link" href="#meetings">When meetings are acceptable</a>”
-              for more details.
+              justification. See the section on “<a
+                class="link"
+                href="#meetings"
+                >when meetings are acceptable</a
+              >” for more details.
             </p>
             <figure class="figure">
               <img
@@ -127,31 +136,35 @@
             </p>
             <ol class="section__list">
               <li class="section__list-item">
-              <strong><a class="link" href="#refine">Refine</a></strong>: Refine new stories, triage bugs, and
-              prioritize tech debt.
+                <strong><a class="link" href="#refine">Refine</a></strong
+                >: Refine new stories, triage bugs, and prioritize tech debt.
               </li>
               <li class="section__list-item">
-              <strong><a class="link" href="#assign">Assign</a></strong>: Ensure each team member has assigned
-              work.
+                <strong><a class="link" href="#assign">Assign</a></strong
+                >: Ensure each team member has assigned work.
               </li>
               <li class="section__list-item">
-              <strong><a class="link" href="#unblock">Unblock</a></strong>: Identify blockers and resolve them
-              during this session. There's no sense noting action items if the
-              team is capable of assisting immediately.
+                <strong><a class="link" href="#unblock">Unblock</a></strong
+                >: Identify blockers and resolve them during this session.
+                There's no sense noting action items if the team is capable of
+                assisting immediately.
               </li>
               <li class="section__list-item">
-              <strong><a class="link" href="#review">Review</a></strong>: Review all outstanding pull requests.
+                <strong><a class="link" href="#review">Review</a></strong
+                >: Review all outstanding pull requests.
               </li>
               <li class="section__list-item">
-              <strong><a class="link" href="#mob">Mob</a></strong>: Identify the top priority and use mob
-              programming to get it done. This involves the entire team
-              including Product and QA; immediate feedback is invaluable.
+                <strong><a class="link" href="#mob">Mob</a></strong
+                >: Identify the top priority and use mob programming to get it
+                done. This involves the entire team including Product and QA;
+                immediate feedback is invaluable.
               </li>
               <li class="section__list-item">
-              <strong><a class="link" href="#retrospect">Retrospect</a></strong>: If there's nothing urgent, review
-              retrospective items. Each day, the team should add items to a
-              board asynchronously, so that they can eventually be reviewed
-              together in this meeting.
+                <strong
+                  ><a class="link" href="#retrospect">Retrospect</a></strong
+                >: If there's nothing urgent, review retrospective items. Each
+                day, the team should add items to a board asynchronously, so
+                that they can eventually be reviewed together in this meeting.
               </li>
             </ol>
             <p class="section__text">
@@ -172,7 +185,11 @@
               consumed by external parties, it may lead to misconceptions which
               could wrongly influence how the team is handled or perceived. The
               team's reputation should be judged by the quality of its output
-              alone.
+              alone. Read more in the section on “<a
+                class="link"
+                href="#metrics"
+                >Metrics</a
+              >.”
             </p>
             <blockquote class="quote">
               “Working software is the primary measure of progress.”
@@ -511,6 +528,76 @@
                 This approach is a more efficient use of time and primes the
                 discussion to be more fruitful.
               </p>
+            </article>
+            <article class="article" id="feedback">
+              <h1 class="article__heading">Customer Feedback</h1>
+              <p class="article__text">
+                Feedback is a critical component of any successful team. It is
+                important to regularly solicit feedback from customers to ensure
+                that the team is building the right product, constantly adapting
+                to change rather than focusing too much on scope and
+                requirements up front.
+              </p>
+              <blockquote class="quote">
+                “Responding to change over following a plan”
+                <br />
+                &mdash; Agile Manifesto
+              </blockquote>
+              <p class="article__text">
+                Customers should be invited to join the Collab Hour session to
+                create an open dialogue, so that the team can better understand
+                the needs and expectations of the end users. The frequency of
+                customer feedback sessions should be determined by the team, but
+                the standard is every two weeks.
+              </p>
+              <p class="article__text">
+                These feedback sessions do not require a release at the same
+                interval. It's often best to release features as soon as they
+                are ready, rather than waiting for a predetermined release date.
+              </p>
+              <p class="article__text">
+                While not specifically required, a continuous deployment
+                strategy works well with this model. Feature flags allow the
+                team to release features to production without making them
+                visible to end users. This minimizes the risk of long-lived
+                feature branches and allows the team to gather feedback early
+                and often.
+              </p>
+            </article>
+            <article class="article" id="metrics">
+              <h1 class="article__heading">Metrics</h1>
+              <p class="article__text">
+                As stated, teams are not required to track metrics, but they may
+                opt to do so. All metrics must be kept strictly confidential,
+                for the team's eyes only, apart from management.
+              </p>
+              <p class="article__text">
+                Performance tracking applies unnecessary pressure on the team,
+                which can lead to a decrease in morale and hence productivity.
+                Furthermore, surveillance of such metrics often drives the wrong
+                behavior, such as focusing on velocity and arbitrary commitments
+                over code quality, customer value, or business revenue.
+              </p>
+              <p class="article__text">
+                While performance metrics may feel easy to measure, ignoring
+                nuance in the circumstances may lead to incorrect conclusions.
+                For example, a senior engineer may go several weeks without
+                delivering a single story, but they may be providing invaluable
+                mentorship to the team. The value of this mentorship is not
+                reflected in the metrics, but the resulting increase in team
+                productivity is undeniable.
+              </p>
+              <p class="article__text">
+                In reality, the full accurate truth is not easily quantifiable.
+                This is a fact of life. In order to make the best decisions, we
+                must accept this uncomfortable truth and remain cognizant of the
+                limitations of our data. As a business, we should optimize for
+                team efficiency rather than predictibility, which inherently
+                involves a degree of uncertainty. The alternative is to optimize
+                for metrics, which is a dangerous path that often leads to poor
+                outcomes.
+              </p>
+              <p class="article__text"></p>
             </article>
           </section>
         </main>
