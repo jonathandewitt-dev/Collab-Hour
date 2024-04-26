@@ -23,13 +23,12 @@
     <div class="page">
       <div class="page-content">
         <div class="nav-wrapper">
-          <nav class="nav" id="nav">
+          <nav class="nav js-nav" id="nav">
             <div class="toggle-wrapper">
               <button
-                class="nav-toggle"
+                class="nav-toggle js-close"
                 aria-expanded="false"
                 aria-controls="nav"
-                id="close"
               >
                 <svg
                   class="icon"
@@ -50,10 +49,9 @@
             </a>
           </nav>
           <button
-            class="nav-toggle"
+            class="nav-toggle js-open"
             aria-expanded="false"
             aria-controls="nav"
-            id="open"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -121,10 +119,10 @@
         </main>
       </div>
       <footer class="site-footer">
-        <small
-          >&copy; <span id="year"></span> collabhouragile.org. All rights
-          reserved.</small
-        >
+        <small>
+          &copy; <span class="js-year"></span>
+          collabhouragile.org. All rights reserved.
+        </small>
       </footer>
     </div>
     <script src="/scripts.js"></script>
