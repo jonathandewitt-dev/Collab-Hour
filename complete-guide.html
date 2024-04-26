@@ -26,13 +26,12 @@
     <div class="page">
       <div class="page-content">
         <div class="nav-wrapper">
-          <nav class="nav" id="nav">
+          <nav class="nav js-nav" id="nav">
             <div class="toggle-wrapper">
               <button
-                class="nav-toggle"
+                class="nav-toggle js-close"
                 aria-expanded="false"
                 aria-controls="nav"
-                id="close"
               >
                 <svg
                   class="icon"
@@ -53,10 +52,9 @@
             <a class="nav-link" href="/core-values">Core Values</a>
           </nav>
           <button
-            class="nav-toggle"
+            class="nav-toggle js-open"
             aria-expanded="false"
             aria-controls="nav"
-            id="open"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +72,35 @@
           <h2 class="site-header__subheading">The Complete Guide</h2>
         </header>
         <main class="main-content">
-          <section class="section">
+          <nav class="secondary-nav">
+            <ul class="secondary-nav__list">
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#summary">Summary</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#meetings">Meetings</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#refine">Refine</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#assign">Assign</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#unblock">Unblock</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#review">Review</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#mob">Mob</a>
+              </li>
+              <li class="secondary-nav__list-item">
+                <a class="secondary-nav__link" href="#retrospect">Retrospect</a>
+              </li>
+            </ul>
+          </nav>
+          <section class="section" id="summary">
             <h1 class="section__heading">Summary</h1>
             <p class="section__text">
               The model is straightforward: there's one daily meeting called
@@ -459,7 +485,7 @@
                 portion for too many days in a row.
               </p>
             </article>
-            <article class="article">
+            <article class="article" id="retrospect">
               <h1 class="article__heading">Retrospect</h1>
               <blockquote class="quote">
                 “At regular intervals, the team reflects on how to become more
@@ -491,7 +517,7 @@
       </div>
       <footer class="site-footer">
         <small
-          >&copy; <span id="year"></span> collabhouragile.org. All rights
+          >&copy; <span class="js-year"></span> collabhouragile.org. All rights
           reserved.</small
         >
       </footer>

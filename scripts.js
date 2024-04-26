@@ -1,7 +1,7 @@
-const nav = document.querySelector(".nav");
-const navOpen = document.querySelector("#open");
-const navClose = document.querySelector("#close");
-const year = document.querySelector("#year");
+const nav = document.querySelector(".js-nav");
+const navOpen = document.querySelector(".js-open");
+const navClose = document.querySelector(".js-close");
+const year = document.querySelector(".js-year");
 
 const toggleNav = (open) => {
   nav.setAttribute("aria-hidden", !open);
