@@ -32,7 +32,7 @@ body {
   margin-top: -4.5rem;
   pointer-events: none;
 }
-.main-content {
+.main-content--with-nav {
   padding-right: 10rem;
 }
 .secondary-nav {
@@ -68,8 +68,8 @@ body {
   background-color: var(--color-site-2);
   opacity: 1;
 }
-@media (max-width: 975px) {
-  .main-content {
+@media (max-width: 974px) {
+  .main-content--with-nav {
     padding-right: 0;
   }
   .secondary-nav {
@@ -84,7 +84,7 @@ body {
   }
 }
 @media (min-width: 1330px) {
-  .main-content {
+  .main-content--with-nav {
     padding-right: 0;
   }
 }
