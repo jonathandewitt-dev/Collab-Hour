@@ -1,34 +1,33 @@
 const express = require("express");
+const path = require("path");
+const livereload = require("livereload");
+const connectLiveReload = require("connect-livereload");
 
 const app = express();
 const port = 3000;
 
-const routes = [
-  {
-    path: "/",
-    file: "index.html",
-  },
-  {
-    path: "/core-values",
-    file: "core-values.html",
-  },
-  {
-    path: "/complete-guide",
-    file: "complete-guide.html",
-  },
-  {
-    path: "/collab-teams",
-    file: "collab-teams.html",
-  },
-];
+const publicDir = path.join(__dirname, 'public');
 
-app.use(express.static(__dirname));
+const liveReloadServer = livereload.createServer();
+liveReloadServer.watch(publicDir);
 
-for (const route of routes) {
-  app.get(route.path, (_, res) => {
-    res.sendFile(__dirname + "/" + route.file);
-  });
-}
+app.use(connectLiveReload());
+app.use((_, res, next) => {
+  const originalSend = res.send;
+
+  res.send = function (body) {
+    if (typeof body === "string" && body.includes("</body>")) {
+      const liveReloadScript =
+        '<script src="http://localhost:35729/livereload.js"></script>';
+      body = body.replace("</body>", `${liveReloadScript}</body>`);
+    }
+    return originalSend.call(this, body);
+  };
+
+  next();
+});
+
+app.use(express.static(publicDir, { extensions: ['html'] }));
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
