@@ -274,6 +274,38 @@ body {
   text-decoration: none;
   border-bottom: 0.1rem solid;
 }
+.button-group {
+  display: grid;
+  gap: 1rem;
+  max-width: max-content;
+  margin: 0 auto 0 2rem;
+  padding-bottom: 3rem;
+}
+.button {
+  color: var(--color-site-1);
+  background-color: var(--color-site-1-c-1);
+  padding: 0.5rem 1rem;
+  font: inherit;
+  border: 0 solid;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.button--link {
+  display: inline-block;
+  text-decoration: none;
+}
+.details {
+  margin: 1rem auto;
+  max-width: 50rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.details__summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
 .section__list,
 .article__list,
 .article-section__list {

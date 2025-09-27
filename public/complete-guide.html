@@ -95,6 +95,58 @@
               <a class="table-of-contents__link" href="#metrics">Metrics</a>
             </nav>
           </aside>
+          <section class="section" id="download">
+            <h1 class="section__heading">Download</h1>
+            <p class="section__text">
+              This guide is evolving, so history is kept of the updates made
+              over time.
+            </p>
+            <details class="details">
+              <summary class="details__summary">Notable changes in v2</summary>
+              <ul>
+                <li>
+                  The "Review" stage has been removed entirely, because pull
+                  requests are not necessarily a consideration at all in modern
+                  teams, and as such are not worth baking into the process. With
+                  the heavy emphasis on collaboration, peer reviews should
+                  happen naturally without a formal step.
+                </li>
+                <li>
+                  "Unblock" is now at the top, because knocking down walls is
+                  always the most valuable thing you can do for a team.
+                </li>
+                <li>
+                  "Retrospect" now comes before "Mob," because mob sessions tend
+                  to take all the remaining time, and retrospection is too
+                  valuable to skip.
+                </li>
+                <li>
+                  "Refine" is now last, because if a team has no tasks to work
+                  on, then refinement becomes the fallback activity anyway. All
+                  other steps are more valuable than planning, relatively
+                  speaking.
+                </li>
+                <li>
+                  Instead of low/medium/high, bugs are now classified as
+                  blocking, non-blocking, or partially-blocking. This language
+                  is less likely to be misinterpreted, and eliminates the need
+                  for follow-up explanations.
+                </li>
+              </ul>
+            </details>
+            <div class="button-group">
+              <button class="button" onclick="window.print()">
+                Print Current Version (v2)
+              </button>
+              <a
+                class="button button--link"
+                href="/files/Collab_Hour_Guide_v1.pdf"
+                download
+              >
+                Download PDF (v1)
+              </a>
+            </div>
+          </section>
           <section class="section" id="summary">
             <h1 class="section__heading">Summary</h1>
             <p class="section__text">
@@ -116,8 +168,8 @@
               />
             </figure>
             <p class="section__text">
-              During each session, six descending priorities guide the
-              discussion, though it's not necessary for all six to be completed
+              During each session, five descending priorities guide the
+              discussion, though it's not necessary for all five to be completed
               before concluding the meeting. If you find that later priorities
               never get addressed, it may be beneficial to pick up each day
               where you left off the previous day, but remember to avoid getting
@@ -125,23 +177,17 @@
             </p>
             <ol class="section__list">
               <li class="section__list-item">
-                <strong><a class="link" href="#refine">Refine</a></strong
-                >: Refine new stories, triage bugs, and prioritize tech debt.
-              </li>
-              <li class="section__list-item">
-                <strong><a class="link" href="#claim">Claim</a></strong
-                >: Ensure each team member claims some work from the top of the
-                priority list.
-              </li>
-              <li class="section__list-item">
                 <strong><a class="link" href="#unblock">Unblock</a></strong
                 >: Identify blockers to progress and resolve them during this
-                session. There's no sense noting action items if the team is
-                capable of assisting immediately.
+                session. If the team is capable of assisting immediately, then
+                <em>do not</em> defer the task until after the meeting.
               </li>
               <li class="section__list-item">
-                <strong><a class="link" href="#review">Review</a></strong
-                >: Review all outstanding pull requests.
+                <strong
+                  ><a class="link" href="#retrospect">Retrospect</a></strong
+                >: Items should be added to a retro board in real time as ideas
+                or problems come up. When the daily Collab Hour begins, the team
+                should review any items and adjust accordingly.
               </li>
               <li class="section__list-item">
                 <strong><a class="link" href="#mob">Mob</a></strong
@@ -150,22 +196,29 @@
                 immediate feedback is invaluable.
               </li>
               <li class="section__list-item">
-                <strong
-                  ><a class="link" href="#retrospect">Retrospect</a></strong
-                >: If there's nothing urgent, review retrospective items. Each
-                day, the team should add items to a board asynchronously, so
-                that they can eventually be reviewed together in this meeting.
+                <strong><a class="link" href="#claim">Claim</a></strong
+                >: Before concluding, each team member should claim some work
+                from the top of the priority list.
+                <em
+                  >Claiming work does not remove it from the next Collab Hour
+                  agenda</em
+                >; it only avoids conflicts. Half-finished, uncommitted work may
+                be picked up by the entire group during the next session. Pair
+                programming is encouraged outside of Collab Hour.
+              </li>
+              <li class="section__list-item">
+                <strong><a class="link" href="#refine">Refine</a></strong
+                >: Refine new stories, triage bugs, and prioritize tech debt.
               </li>
             </ol>
             <p class="section__text">
-              Customers should regularly should join the “Collab Hour” session
-              to provide feedback and answer questions. This works fairly well
-              at two weeks, which is a similar cadence to most sprints in Scrum,
-              but the team should agree on a schedule that makes the most
-              sense for them. It should be noted, however, that this does not
-              require a release at the same interval. Wherever possible, favor
-              continuous deployment with feature flags to minimize long-lived
-              feature branches.
+              Customers should regularly join the “Collab Hour” session to
+              provide input and answers in real time. This may work fairly well
+              at two weeks, which is a familiar cadence for many teams today,
+              but the team should agree on whatever makes the most sense for
+              them. It should be noted, however, that this does not require a
+              release at the same interval. Favor continuous delivery; release
+              at least once every day.
             </p>
             <p class="section__text">
               While no particular metrics are required by this framework, teams
@@ -173,14 +226,13 @@
               process overhead is generally discouraged, but there is only one
               absolute prescription regarding metrics &mdash; any performance
               data generated by the team must remain strictly confidential. If
-              such data is consumed by external parties, it may lead to
-              misconceptions which could wrongly influence how the team is
-              handled or perceived. The team's reputation should be judged by
-              the quality of its output alone. Therefore, only those metrics
-              that focus on value delivery should be made available externally.
-              Read more in the section on “<a class="link" href="#metrics"
-                >Metrics</a
-              >.”
+              such data is consumed by external parties, (upper managers,
+              executives, stakeholders), it may lead to misconceptions which
+              could wrongly influence how the team is handled or perceived. The
+              team's reputation should be judged by the quality of its output
+              alone. Therefore, only those metrics that focus on value delivery
+              should be made available externally. Read more in the section on
+              “<a class="link" href="#metrics">Metrics</a>.”
             </p>
             <blockquote class="quote">
               “Working software is the primary measure of progress.”
@@ -247,218 +299,49 @@
                 experience.
               </p>
             </article>
-            <article class="article" id="refine">
-              <h1 class="article__heading">Refine</h1>
-              <p class="article__text">
-                Refinement is the process of preparing tasks for development.
-                The goal is to have a clear understanding of the work required
-                before development begins.
-              </p>
-              <p class="article__text">
-                While it is important to prepare tasks for development, it is
-                equally important to avoid spending the entire hour refining
-                tasks. Focus on refining only the most important tasks for the
-                day, and make sure to leave time for other priorities.
-              </p>
-              <p class="article__text">
-                Some days, you may find that there are no tasks to refine. This
-                is perfectly normal, and in fact better for the sake of
-                productivity. Simply move on to the next priority.
-              </p>
-              <p class="article__text">
-                The following are some best practices for refining different
-                types of tasks.
-              </p>
-              <section class="article-section">
-                <h1 class="article-section__heading">Stories</h1>
-                <p class="article-section__text">
-                  Stories are the most common type of task in software. They are
-                  typically written in the form of a user story, which describes
-                  a feature from the perspective of the user: "As a...I
-                  want...so that..." This helps orient the team around the
-                  user's needs, rather than the technical implementation.
-                </p>
-                <p class="article-section__text">
-                  Most, if not all authors of the original Agile manifesto agree
-                  that stories should not be estimated in points nor time, so
-                  it's best to avoid this practice. Instead, use this time to
-                  determine whether a story is as small as it can possibly get
-                  while also delivering a complete feature, or “vertical slice.”
-                  <a
-                    class="link"
-                    href="https://ronjeffries.com/xprog/blog/how-should-user-stories-be-written/"
-                  >
-                    Use Ron Jeffries' approach to crafting user stories for best
-                    results.
-                  </a>
-                </p>
-                <p class="article-section__text">
-                  When it comes to large collections of stories,
-                  <a
-                    class="link"
-                    href="https://jpattonassociates.com/the-new-backlog/"
-                    >Jeff Patton's "story mapping" technique</a
-                  >
-                  is a great way to visualize the user journey and prioritize
-                  stories based on user needs.
-                </p>
-              </section>
-              <section class="article-section">
-                <h1 class="article-section__heading">Bug Reports</h1>
-                <p class="article-section__text">
-                  Careful bug reporting ensures smooth transitions from QA to
-                  development. Poorly written bug reports can lead to
-                  unnecessary confusion and delay their resolution. Below is a
-                  checklist of items that should be included in every bug
-                  report.
-                </p>
-                <ol class="article-section__list">
-                  <li class="article-section__list-item">
-                    <strong>Environments:</strong> This is not only the
-                    environment the bug was reported in, but rather
-                    <em>all</em> environments where the bug exists. (Common
-                    environments might include: DEV, TEST, QA, and STAGING.)
-                    This helps a developer understand when and how the bug was
-                    introduced.
-                  </li>
-                  <li class="article-section__list-item">
-                    <strong>Steps to reproduce:</strong> Provide a comprehensive
-                    list of all user actions from the moment the app is opened
-                    until the bug is observed.
-                  </li>
-                  <li class="article-section__list-item">
-                    <strong>Scenario:</strong> It's the responsibility of the
-                    bug reporter to outline the details of the scenario and
-                    reproduce the issue in the development environment. All the
-                    necessary prerequisite data must be in place for the
-                    developer to begin working. If reproduction is not possible,
-                    this should be noted during triage before the task is picked
-                    up.
-                  </li>
-                  <li class="article-section__list-item">
-                    <strong>Expected vs Actual:</strong> Clearly articulate the
-                    expected behavior versus what is observed. This reduces
-                    uncertainty and provides guidelines for acceptance to close
-                    the bug.
-                  </li>
-                </ol>
-                <p class="article-section__text">
-                  To triage bugs effectively, determine the severity in terms of
-                  "low," "medium," or "high." If a bug is deemed "low," it may
-                  be deferred to a later date. A "medium" severity bug should be
-                  resolved reasonably soon, but it's not necessary to interrupt
-                  work currently in progress. If a bug has a "high" severity,
-                  all other work should be paused until it is resolved as
-                  quickly as possible.
-                </p>
-                <p class="article-section__text">
-                  The severity of a bug is not necessarily related to its
-                  complexity. A "high" severity bug may be a simple fix, while a
-                  "low" severity bug may be difficult to resolve. The severity
-                  is determined by the impact the bug has on the user
-                  experience.
-                </p>
-                <p class="article-section__text">
-                  If a bug is found with a story that is currently in progress
-                  and unreleased to production, avoid creating a separate bug
-                  report. Instead, return the story in question to the
-                  developer, as additional tracking will only create confusion.
-                  Bugs found in active stories do not need to be assigned a
-                  severity, as no users will be impacted until the story is
-                  released.
-                </p>
-              </section>
-
-              <section class="article-section">
-                <h1 class="article-section__heading">Technical Debt</h1>
-                <p class="article-section__text">
-                  Technical debt, or just "tech debt," is the cost of additional
-                  work created by delaying long term solutions to expedite
-                  business value. Tech debt is not inherently bad, but it should
-                  be managed effectively to avoid accumulating to the point
-                  where it impedes progress.
-                </p>
-                <p class="article-section__text">
-                  It's also natural for unintentional tech debt to accumulate
-                  over time, as the system grows and new requirements emerge.
-                  This is understood and expected, and as such ought to be
-                  factored into the available time for development.
-                </p>
-                <p class="article-section__text">
-                  Introducing tech debt deliberately is primarily a choice for
-                  engineers to make, not product owners. Product owners may
-                  guide the discussion in terms of the value to be gained, but
-                  engineers possess the technical expertise to make informed
-                  decisions around acceptable risk and quality. In a similar
-                  vein, engineers should also author and track tech debt tasks,
-                  as they are best equipped to understand the work involved and
-                  its implications.
-                </p>
-                <p class="article-section__text">
-                  To allow the necessary time to address tech debt, engineers
-                  must be given sufficient time each week to work independently
-                  of product demands. This time should be protected and not used
-                  for additional feature work.
-                </p>
-              </section>
-            </article>
-            <article class="article" id="claim">
-              <h1 class="article__heading">Claim</h1>
-              <p class="article__text">
-                All team members should have a clear understanding of their
-                tasks for the day. If anyone is left without work to do, Collab
-                Hour provides an opportunity to address that.
-              </p>
-              <p class="article__text">
-                The stories should be prioritized from top to bottom, and should
-                be claimed from the top of the list. Cherry-picking from the
-                middle or bottom of the list is discouraged; the product owner's
-                priorities should be respected to ensure the team is always
-                delivering the highest value.
-              </p>
-              <p class="article__text">
-                Some tasks, particularly complex stories, may require the
-                collaboration of multiple engineers. A well-defined story
-                (vertical slice) often spans across the frontend, backend, and
-                database. In such cases, multiple individuals may claim the same
-                story, or subtasks could be created to track each layer
-                independently. This often requires a high degree of
-                collaboration, thus pair or mob programming is encouraged.
-              </p>
-            </article>
             <article class="article" id="unblock">
               <h1 class="article__heading">Unblock</h1>
               <p class="article__text">
                 If any team member is blocked, whether by something outside
                 their control or simply by a difficult task that requires
-                assistance, then the team should work together during the Collab
-                Hour session to resolve the issue promptly.
+                assistance, then the team should swarm on it to resolve the
+                issue promptly.
               </p>
               <p class="article__text">
                 If the organization and team are structured properly, then no
                 blocker should lie beyond the team's power to rectify
-                internally. Addressing blockers in real-time eliminates the need
-                for deferred action items and facilitates a swift return to
-                productivity.
-              </p>
-              <p class="article__text">
-                If the team is unable to resolve a blocker during the Collab
-                Hour, then the team should agree on a plan to address it before
-                the next session. This may involve escalating the issue to a
-                different team or individual, but the goal is to ensure that the
-                team can continue working without impediment.
+                internally. If key people are unavailable to make a decision or
+                answer a question, a tentative decision may be made without
+                them; it's better to make the wrong choice and revert later than
+                to pause forward progress.
               </p>
             </article>
-            <article class="article" id="review">
-              <h1 class="article__heading">Review</h1>
+
+            <article class="article" id="retrospect">
+              <h1 class="article__heading">Retrospect</h1>
+              <blockquote class="quote">
+                “At regular intervals, the team reflects on how to become more
+                effective, then tunes and adjusts its behavior accordingly.”
+                <br />
+                &mdash; Agile Manifesto
+              </blockquote>
               <p class="article__text">
-                While active collaboration may limit the need for reviews, there
-                are occasions where individual work is more suitable. If any
-                such code is awaiting approval, Collab Hour presents an occasion
-                to make any corrections as a group, then merge once it has
-                unanimous approval. The goal is to adjust and merge code during
-                the group review, rather than leaving comments for the pull
-                request owner to address at a later time.
+                A key part of Agile is continuous improvement, often achieved
+                through retrospective sessions. Traditionally, teams use methods
+                like sticky notes or digital equivalents to categorize ideas
+                into columns such as "start, stop, continue." However, this
+                approach requires the interruption of ongoing tasks to meet and
+                discuss.
+              </p>
+              <p class="article__text">
+                An alternative approach is to continuously reflect throughout
+                the day. The retro board should remain accessible at any time so
+                ideas can be recorded as they arise. During the Collab Hour
+                session, the team can work together to agree on process changes
+                to address each suggestion. The intent is to take each item as
+                far as possible before beginning a group conversation around it.
+                This approach is a more efficient use of time and primes the
+                discussion to be more fruitful.
               </p>
             </article>
             <article class="article" id="mob">
@@ -515,32 +398,139 @@
                 portion for too many days in a row.
               </p>
             </article>
-            <article class="article" id="retrospect">
-              <h1 class="article__heading">Retrospect</h1>
-              <blockquote class="quote">
-                “At regular intervals, the team reflects on how to become more
-                effective, then tunes and adjusts its behavior accordingly.”
-                <br />
-                &mdash; Agile Manifesto
-              </blockquote>
+            <article class="article" id="claim">
+              <h1 class="article__heading">Claim</h1>
               <p class="article__text">
-                A key part of Agile is continuous improvement, often achieved
-                through retrospective sessions. Traditionally, teams use methods
-                like sticky notes or digital equivalents to categorize ideas
-                into columns such as "start, stop, continue." However, this
-                approach requires the interruption of ongoing tasks to meet and
-                discuss.
+                All team members should leave Collab Hour with a clear
+                understanding of who is working on what, to avoid conflicts.
               </p>
               <p class="article__text">
-                An alternative approach is to continuously reflect throughout
-                the day. The retro board should remain accessible at any time so
-                ideas can be recorded as they arise. During the Collab Hour
-                session, the team can work together to agree on process changes
-                to address each suggestion. The intent is to take each item as
-                far as possible before beginning a group conversation around it.
-                This approach is a more efficient use of time and primes the
-                discussion to be more fruitful.
+                Tasks should be prioritized from top to bottom, and should be
+                claimed from the top of the list. Cherry-picking from the middle
+                or bottom of the list is generally discouraged; the agreed
+                priority list should be respected to ensure the team is always
+                delivering the highest value.
               </p>
+            </article>
+            <article class="article" id="refine">
+              <h1 class="article__heading">Refine</h1>
+              <p class="article__text">
+                Refinement (sometimes known as grooming) is the process of
+                preparing and understanding the necessary development tasks.
+              </p>
+              <p class="article__text">
+                This time should focus on clarity and prioritization, but not
+                estimation. The authors of the Agile manifesto generally agree
+                that estimates are counterproductive. The cost of time and value
+                lost outweighs any value gained; decades of peer-reviewed
+                research confirm that estimates are unreliable and observably
+                harmful to decision making and behavior.
+              </p>
+              <section class="article-section">
+                <h1 class="article-section__heading">Stories</h1>
+                <p class="article-section__text">
+                  User stories are the most common type of task in software.
+                  They are intended to orient the team around the user's needs,
+                  rather than the technical implementation.
+                </p>
+                <p class="article-section__text">
+                  Instead of making judgment calls about whether a story is
+                  "small enough," it's better to always reduce every story to
+                  the smallest it can possibly be. That said, stories should not
+                  be split on the wrong axis, like dividing front and back end
+                  work for example. A story should be framed as a user's
+                  expectation, which usually involves a complete vertical slice
+                  of the system, from the user interface to the database. For
+                  further guidance,
+                  <a
+                    class="link"
+                    href="https://ronjeffries.com/xprog/blog/how-should-user-stories-be-written/"
+                  >
+                    see Ron Jeffries' approach to crafting good user stories.
+                  </a>
+                </p>
+                <p class="article-section__text">
+                  When it comes to large collections of stories,
+                  <a
+                    class="link"
+                    href="https://jpattonassociates.com/the-new-backlog/"
+                    >Jeff Patton's "story mapping" technique</a
+                  >
+                  is a great way to visualize the user journey and prioritize
+                  stories based on user needs.
+                </p>
+              </section>
+              <section class="article-section">
+                <h1 class="article-section__heading">Bug Reports</h1>
+                <p class="article-section__text">
+                  Careful bug reporting can avoid unnecessary confusion and
+                  delays in fixes. Below is a checklist of items that should be
+                  included in every bug report.
+                </p>
+                <ol class="article-section__list">
+                  <li class="article-section__list-item">
+                    <strong>Environments:</strong> Not only the environment the
+                    bug was reported in, but <em>all</em> environments where the
+                    bug exists. (e.g., QA, STAGING, etc.) This is crucial to
+                    narrow down the root cause.
+                  </li>
+                  <li class="article-section__list-item">
+                    <strong>Steps to reproduce:</strong> A comprehensive list of
+                    all user actions from the moment the app is opened until the
+                    bug is observed. Leaving gaps to interpretation may hinder a
+                    prompt fix.
+                  </li>
+                  <li class="article-section__list-item">
+                    <strong>Scenario:</strong> It's the responsibility of the
+                    <em>reporter</em> to ensure that the bug can be reproduced
+                    in a context that's useful to the developer(s) fixing the
+                    problem.
+                  </li>
+                  <li class="article-section__list-item">
+                    <strong>Expected vs Actual:</strong> Clearly articulate the
+                    correct behavior versus what is observed. This reduces
+                    uncertainty and provides guidelines for acceptance to close
+                    the bug.
+                  </li>
+                </ol>
+                <p class="article-section__text">
+                  To triage bugs effectively, determine the severity in terms of
+                  "blocking," "non-blocking," or "partially-blocking." A bug is
+                  blocking if it prevents the user from completing a task.
+                </p>
+                <p class="article-section__text">
+                  The severity of a bug is not necessarily related to its
+                  complexity. A "blocking" bug may be a simple fix, while a
+                  "non-blocking" bug may be difficult to resolve.
+                </p>
+                <p class="article-section__text">
+                  Avoid creating bug reports for features that haven't yet been
+                  released. Instead, return the task in question to the
+                  developer, as additional tracking will only create confusion.
+                </p>
+              </section>
+              <section class="article-section">
+                <h1 class="article-section__heading">Technical Debt</h1>
+                <p class="article-section__text">
+                  Technical debt, or just "tech debt," is the cost of delaying
+                  long term stable solutions to deliver something faster. Tech
+                  debt is not inherently bad, but it should be limited to avoid
+                  slowing progress.
+                </p>
+                <p class="article-section__text">
+                  Only those intimately familiar with the code architecture and
+                  the impact of changes can accurately assess tech debt. Thus,
+                  it's exclusively the engineers' responsibility to identify and
+                  prioritize tech debt items, especially when intentionally
+                  incurred for expediency. Those who lack the appropriate
+                  technical context should not be involved in these decisions.
+                </p>
+                <p class="article-section__text">
+                  Engineers <em>must</em> be allowed sufficient time each day to
+                  pay down tech debt, or else risk issues with stability and
+                  significant declines in delivery speed.
+                </p>
+              </section>
             </article>
             <article class="article" id="feedback">
               <h1 class="article__heading">Customer Feedback</h1>
