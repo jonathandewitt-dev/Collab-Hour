@@ -43,6 +43,7 @@ body {
   width: var(--width);
   height: 0;
   margin-left: calc(-1 * var(--width));
+  scroll-target-group: auto;
 }
 .table-of-contents__link {
   color: var(--color-site-1-c-1);
@@ -54,6 +55,10 @@ body {
 }
 .table-of-contents__link:hover {
   background-color: var(--color-site-2);
+  opacity: 1;
+}
+.table-of-contents__link:target-current {
+  color: var(--color-site-1-c);
   opacity: 1;
 }
 @media (max-width: 974px) {
