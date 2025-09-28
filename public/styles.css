@@ -9,6 +9,16 @@
   --font-text: "Roboto", sans-serif;
   --font-heading: "Josefin Slab", sans-serif;
 }
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-site-1: #fdfcfb;
+    --color-site-1-1: #eae7e5;
+    --color-site-1-c: #1a0f0f;
+    --color-site-1-c-1: #3a1a1a;
+    --color-site-2: rgba(180, 20, 20, 0.08);
+    --color-site-2-1: rgba(228, 153, 153, 0.4);
+  }
+}
 html,
 body {
   margin: 0;
