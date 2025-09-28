@@ -7,7 +7,7 @@
     <meta property="og:title" content="Collab Hour Guide" />
     <meta
       property="og:description"
-      content="A complete guide to Collab Hour, a daily meeting process for promoting effective collaboration."
+      content="A complete guide to Collab Hour, a daily process for promoting effective collaboration."
     />
     <meta
       property="og:image"
@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Collab Hour Guide" />
     <meta
       name="twitter:description"
-      content="A complete guide to Collab Hour, a daily meeting process for promoting effective collaboration."
+      content="A complete guide to Collab Hour, a daily process for promoting effective collaboration."
     />
     <meta
       name="twitter:image"
@@ -82,6 +82,12 @@
             <h2 class="table-of-contents__heading">Table of Contents</h2>
             <nav class="table-of-contents__nav">
               <a class="table-of-contents__link" href="#summary">Summary</a>
+              <a class="table-of-contents__link" href="#is-it-agile"
+                >Is It Agile?</a
+              >
+              <a class="table-of-contents__link" href="#daily-session"
+                >Daily Session</a
+              >
               <a class="table-of-contents__link" href="#meetings">Meetings</a>
               <a class="table-of-contents__link" href="#unblock">1. Unblock</a>
               <a class="table-of-contents__link" href="#retrospect"
@@ -153,9 +159,9 @@
           <section class="section" id="summary">
             <h2 class="section__heading">Summary</h2>
             <p class="section__text">
-              The model is straightforward: there's one daily meeting called
-              “Collab Hour,” approximately one hour in duration, where all
-              necessary discussions take place. This process
+              The model is straightforward: there's one daily working session
+              called “Collab Hour,” for approximately one hour, where the entire
+              process unfolds. This process
               <em>forbids</em> additional meetings without a clear
               justification. See the section on “<a
                 class="link"
@@ -163,6 +169,42 @@
                 >when meetings are acceptable</a
               >” for more details.
             </p>
+            <p class="section__text">
+              Regarding metrics, there is only one absolute &mdash; any
+              performance data must remain strictly confidential to the team. If
+              such data is consumed by external parties, (upper managers,
+              executives, stakeholders), it may wrongly influence how the team
+              is handled or perceived. The team's reputation should be judged by
+              the quality of its output alone. Therefore, only those metrics
+              that focus on value delivery should be made available externally.
+              Read more in the section on “<a class="link" href="#metrics"
+                >Metrics</a
+              >.”
+            </p>
+            <article class="article" id="is-it-agile">
+              <h3 class="article__heading">
+                Seems Prescriptive... Is It Really Agile?
+              </h3>
+              <p class="article__text">
+                It's a fair question. Agile is about adaptability and
+                collaboration, not process rigidity. This framework is designed
+                to be just structured enough to protect and preserve the core
+                values of the Agile Manifesto.
+              </p>
+              <p class="article__text">
+                Teams are still encouraged to evolve the process continuously
+                based on retrospective feedback. What matters is that the
+                changes come from within the team itself, not imposed from
+                above. The team owns the process, and that ownership is what
+                keeps it agile.
+              </p>
+              <p class="article__text">
+                Iteration is essential, but only after the process has been
+                lived long enough to reveal its strengths and weaknesses, not as
+                a reflex to old habits. It may take a few weeks to adjust, but
+                the value of each guideline will quickly become apparent.
+              </p>
+            </article>
             <figure class="figure">
               <img
                 src="/images/calendar-meetings.jpg"
@@ -170,73 +212,59 @@
                 class="figure__image"
               />
             </figure>
-            <p class="section__text">
-              During each session, five descending priorities guide the
-              discussion, though it's not necessary for all five to be completed
-              before concluding the meeting. If you find that later priorities
-              never get addressed, it may be beneficial to pick up each day
-              where you left off the previous day, but remember to avoid getting
-              stuck in the middle of the list for several days in a row.
-            </p>
-            <ol class="section__list">
-              <li class="section__list-item">
-                <strong><a class="link" href="#unblock">Unblock</a></strong
-                >: Identify blockers to progress and resolve them during this
-                session. If the team is capable of assisting immediately, then
-                <em>do not</em> defer the task until after the meeting.
-              </li>
-              <li class="section__list-item">
-                <strong
-                  ><a class="link" href="#retrospect">Retrospect</a></strong
-                >: Items should be added to a retro board in real time as ideas
-                or problems come up. When the daily Collab Hour begins, the team
-                should review any items and adjust accordingly.
-              </li>
-              <li class="section__list-item">
-                <strong><a class="link" href="#mob">Mob</a></strong
-                >: Identify the top priority and use mob programming to get it
-                done. This involves the entire team including Product and QA;
-                immediate feedback is invaluable.
-              </li>
-              <li class="section__list-item">
-                <strong><a class="link" href="#claim">Claim</a></strong
-                >: Before concluding, each team member should claim some work
-                from the top of the priority list.
-                <em
-                  >Claiming work does not remove it from the next Collab Hour
-                  agenda</em
-                >; it only avoids conflicts. Half-finished, uncommitted work may
-                be picked up by the entire group during the next session. Pair
-                programming is encouraged outside of Collab Hour.
-              </li>
-              <li class="section__list-item">
-                <strong><a class="link" href="#refine">Refine</a></strong
-                >: Refine new stories, triage bugs, and prioritize tech debt.
-              </li>
-            </ol>
-            <p class="section__text">
-              Customers should regularly join the “Collab Hour” session to
-              provide input and answers in real time. This may work fairly well
-              at two weeks, which is a familiar cadence for many teams today,
-              but the team should agree on whatever makes the most sense for
-              them. It should be noted, however, that this does not require a
-              release at the same interval. Favor continuous delivery; release
-              at least once every day.
-            </p>
-            <p class="section__text">
-              While no particular metrics are required by this framework, teams
-              may choose to track data for continuous improvement. Excessive
-              process overhead is generally discouraged, but there is only one
-              absolute prescription regarding metrics &mdash; any performance
-              data generated by the team must remain strictly confidential. If
-              such data is consumed by external parties, (upper managers,
-              executives, stakeholders), it may lead to misconceptions which
-              could wrongly influence how the team is handled or perceived. The
-              team's reputation should be judged by the quality of its output
-              alone. Therefore, only those metrics that focus on value delivery
-              should be made available externally. Read more in the section on
-              “<a class="link" href="#metrics">Metrics</a>.”
-            </p>
+            <article class="article" id="daily-session">
+              <h3 class="article__heading">Collab Hour: The Daily Session</h3>
+              <p class="article__text">
+                Each session, five descending priorities guide the agenda,
+                though it's not necessary for all five to be completed before
+                concluding the meeting.
+              </p>
+              <ol class="article__list">
+                <li class="section__list-item">
+                  <strong><a class="link" href="#unblock">Unblock</a></strong
+                  >: Identify blockers to progress and resolve them during this
+                  session. If the team is capable of assisting immediately, then
+                  <em>do not</em> defer the task until after the meeting.
+                </li>
+                <li class="section__list-item">
+                  <strong
+                    ><a class="link" href="#retrospect">Retrospect</a></strong
+                  >: Items should be added to a retro board in real time as
+                  ideas or problems come up. When the daily Collab Hour begins,
+                  the team should review any items and adjust accordingly.
+                </li>
+                <li class="section__list-item">
+                  <strong><a class="link" href="#mob">Mob</a></strong
+                  >: Identify the top priority and use mob programming to get it
+                  done. This involves the entire team including Product and QA;
+                  immediate feedback is invaluable.
+                </li>
+                <li class="section__list-item">
+                  <strong><a class="link" href="#claim">Claim</a></strong
+                  >: Before concluding, each team member should claim some work
+                  from the top of the priority list.
+                  <em
+                    >Claiming work does not remove it from the next Collab Hour
+                    agenda</em
+                  >; it only avoids conflicts. Half-finished, uncommitted work
+                  may be picked up by the entire group during the next session.
+                  Pair programming is encouraged outside of Collab Hour.
+                </li>
+                <li class="section__list-item">
+                  <strong><a class="link" href="#refine">Refine</a></strong
+                  >: Refine new stories, triage bugs, and prioritize tech debt.
+                </li>
+              </ol>
+              <p class="article__text">
+                Customers should regularly join the “Collab Hour” session to
+                provide input and answers in real time. This may work fairly
+                well at two weeks, which is a familiar cadence for many teams
+                today, but the team should agree on whatever makes the most
+                sense for them. It should be noted, however, that this does not
+                require a release at the same interval. Favor continuous
+                delivery; release at least once every day if possible.
+              </p>
+            </article>
             <blockquote class="quote">
               “Working software is the primary measure of progress.”
               <br />
@@ -424,10 +452,14 @@
               <p class="article__text">
                 This time should focus on clarity and prioritization, but not
                 estimation. The authors of the Agile manifesto generally agree
-                that estimates are counterproductive. The cost of time and value
-                lost outweighs any value gained; decades of peer-reviewed
-                research confirm that estimates are unreliable and observably
-                harmful to decision making and behavior.
+                that estimates are counterproductive, in either time or story
+                points. The cost of
+                <a href="https://www.lean.org/lexicon-terms/waste/" class="link"
+                  >time and value wasted</a
+                >
+                outweighs any value gained; decades of peer-reviewed research
+                confirm that estimates are unreliable and observably harmful to
+                decision making and behavior.
               </p>
               <section class="article-section">
                 <h4 class="article-section__heading">Stories</h4>
@@ -574,16 +606,17 @@
             <article class="article" id="metrics">
               <h3 class="article__heading">Metrics</h3>
               <p class="article__text">
-                As stated, teams are not required to track metrics, but they may
-                opt to do so. All performance metrics must be kept strictly
-                confidential, for the team's eyes only, apart from management.
+                Teams are not required to track metrics, but they may opt to do
+                so. All performance metrics must be kept strictly confidential,
+                for the team's eyes only, apart from HR, upper management,
+                executives, stakeholders, and so on.
               </p>
               <p class="article__text">
                 Metrics focused on "value delivered," such as those listed in
                 the
                 <a class="link" href="https://dorametrics.org/">DORA Metrics</a
-                >, may prove more valuable to external parties than velocity or
-                individual performance.
+                >, may prove more valuable to external parties than velocity,
+                for example.
               </p>
               <p class="article__text">
                 Performance tracking places unnecessary stress on the team,
@@ -599,17 +632,19 @@
                 For example, a senior engineer may go several weeks without
                 delivering a single story, but they may be providing invaluable
                 mentorship to the team. The value of this mentorship is not
-                reflected in the metrics, but the resulting increase in team
-                productivity is undeniable.
+                reflected in the metrics, so when evaluating performance, it may
+                unfairly appear that the engineer is not contributing.
               </p>
               <p class="article__text">
                 The full and accurate truth is not easily quantifiable. This is
                 a fact of life. To make the best decisions, we must accept this
                 uncomfortable reality and remain cognizant of the limitations of
                 our data. Instead of predictablitiy, we should optimize for
-                effectiveness, which inherently involves a degree of
+                <em>effectiveness</em>, which inherently involves a degree of
                 uncertainty. The alternative is to optimize for metrics, which
-                is a dangerous path that often leads to poor outcomes.
+                is a dangerous path that often leads to poor outcomes. Read more
+                about estimation and story points in the
+                <a href="#refine" class="link">Refine</a> section.
               </p>
               <p class="article__text"></p>
             </article>
