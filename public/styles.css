@@ -342,12 +342,18 @@ body {
   padding: 0 1rem 1rem;
 }
 .figure__image {
+  opacity: 0.7;
   max-width: 100%;
   max-height: 32rem;
   object-fit: contain;
   border: 0 solid;
   border-radius: 1rem;
   overflow: hidden;
+  transition: all 0.3s;
+}
+.figure__image:hover {
+  opacity: 1;
+  box-shadow: 0 0 2rem var(--color-site-2-1);
 }
 
 @media print {
