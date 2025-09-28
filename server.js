@@ -30,5 +30,5 @@ app.use((_, res, next) => {
 app.use(express.static(publicDir, { extensions: ['html'] }));
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is listening at http://localhost:${port}`);
 });
