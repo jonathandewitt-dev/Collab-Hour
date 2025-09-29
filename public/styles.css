@@ -166,14 +166,19 @@ body {
   width: 1.2rem;
   height: 1.2rem;
 }
-.theme-toggle__icon--moon {
+.theme-toggle__icon--moon,
+[data-theme="dark"] .theme-toggle__icon--moon {
   display: none;
 }
-[data-theme="light"] .theme-toggle__icon--sun {
-  display: none;
+.theme-toggle__icon--sun,
+[data-theme="dark"] .theme-toggle__icon--sun {
+  display: block;
 }
 [data-theme="light"] .theme-toggle__icon--moon {
   display: block;
+}
+[data-theme="light"] .theme-toggle__icon--sun {
+  display: none;
 }
 .nav-wrapper {
   position: sticky;
