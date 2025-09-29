@@ -30,30 +30,38 @@ const initMobile = () => {
 initMobile(); // run once immediately
 
 const THEME_KEY = "THEME";
-const getStoredTheme = () => localStorage.getItem(THEME_KEY);
+const THEMES = ["dark", "light", "system"];
+const getStoredTheme = () => localStorage.getItem(THEME_KEY) ?? THEMES[0];
 const setStoredTheme = (theme) => localStorage.setItem(THEME_KEY, theme);
 const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-const getPreferredTheme = () => {
-  const storedTheme = getStoredTheme();
-  if (storedTheme !== null) return storedTheme;
-  return darkModeQuery.matches ? "dark" : "light";
-};
+const getSystemTheme = () => (darkModeQuery.matches ? "dark" : "light");
 const setTheme = (theme) => {
-  document.documentElement.setAttribute("data-theme", theme);
   setStoredTheme(theme);
+  if (theme === "system") {
+    document.documentElement.setAttribute("data-theme", getSystemTheme());
+    document.documentElement.setAttribute("data-theme-mode", "auto");
+  } else {
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.setAttribute("data-theme-mode", "manual");
+  }
+  themeToggle.setAttribute("title", `Change theme (current: ${getStoredTheme()})`);
 };
-setTheme(getPreferredTheme()); // run once immediately
+setTheme(getStoredTheme()); // run once immediately
 darkModeQuery.addEventListener("change", () => {
-  if (getStoredTheme() === null) setTheme(getPreferredTheme());
+  if (getStoredTheme() === "system") {
+    setTheme("system"); // Re-apply to get new system theme
+  }
 });
-const toggleDarkMode = () => {
-  const newTheme = getPreferredTheme() === "light" ? "dark" : "light";
-  setTheme(newTheme);
+const changeTheme = () => {
+  const currentTheme = getStoredTheme();
+  const currentIndex = THEMES.indexOf(currentTheme);
+  const nextIndex = (currentIndex + 1) % THEMES.length;
+  setTheme(THEMES[nextIndex]);
 };
 
 navOpen.addEventListener("click", openNav);
 navClose.addEventListener("click", closeNav);
-themeToggle.addEventListener("click", toggleDarkMode);
+themeToggle.addEventListener("click", changeTheme);
 window.addEventListener("resize", initMobile);
 
 year.textContent = new Date().getFullYear();

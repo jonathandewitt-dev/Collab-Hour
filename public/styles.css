@@ -166,19 +166,17 @@ body {
   width: 1.2rem;
   height: 1.2rem;
 }
-.theme-toggle__icon--moon,
-[data-theme="dark"] .theme-toggle__icon--moon {
+.theme-toggle__icon {
   display: none;
 }
-.theme-toggle__icon--sun,
-[data-theme="dark"] .theme-toggle__icon--sun {
+[data-theme="light"][data-theme-mode="manual"] .theme-toggle__icon--sun {
   display: block;
 }
-[data-theme="light"] .theme-toggle__icon--moon {
+[data-theme="dark"][data-theme-mode="manual"] .theme-toggle__icon--moon {
   display: block;
 }
-[data-theme="light"] .theme-toggle__icon--sun {
-  display: none;
+[data-theme-mode="auto"] .theme-toggle__icon--system {
+  display: block;
 }
 .nav-wrapper {
   position: sticky;
